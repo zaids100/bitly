@@ -32,7 +32,7 @@ function App() {
     setLoading(true); // Start loading
 
     try {
-      const response = await fetch('http://localhost:8080/generate-short-id', {
+      const response = await fetch('https://bitly-okbv.onrender.com/generate-short-id', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
