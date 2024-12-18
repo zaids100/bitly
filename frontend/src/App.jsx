@@ -9,7 +9,7 @@ function App() {
 
   const [link, setLink] = useState("");
 
-  const copyLink = () => {
+  const copyLink = () => { // To copy the div content
     navigator.clipboard.writeText(link).then(() => {
     }).catch(err => {
       console.error("Failed to copy: ", err);
@@ -119,21 +119,6 @@ function App() {
               )
             )}
           </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-gray-800 to-black-700 mt-5 px-8 py-6 rounded-2xl shadow-xl max-w-4xl w-full flex items-center justify-between">
-          <div className="text-gray-300 text-lg font-medium max-w-md overflow-hidden text-ellipsis" id="link-text">
-            {link}
-          </div>
-          <button
-            className="bg-gradient-to-r from-blue-500 to-teal-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-teal-600 transition-all ease-in-out duration-200 flex items-center gap-2"
-            onClick={copyLink}
-          >
-            <span className="text-lg">Copy Link!</span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-            </svg>
-          </button>
         </div>
       </div>
     </div>
