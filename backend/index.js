@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(cors());
 app.use(cors({
-    origin : ["https://bitly-one.vercel.app"],
+    origin : ["https://bitly-one.vercel.app","https://bitly-captain-calculus-projects.vercel.app"],
     methods : ["GET","POST"],
     credentials : true
 }));  // Cross-Origin Resource Sharing middleware
